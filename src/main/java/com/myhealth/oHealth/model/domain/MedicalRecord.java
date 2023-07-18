@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -27,12 +27,12 @@ public class MedicalRecord {
     private String condition;
 
     @CreationTimestamp
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_on", nullable = false)
-    private LocalDate createdOn;
+    private LocalDateTime createdOn;
 
     @UpdateTimestamp
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "updated_on", nullable = false)
-    private LocalDate updatedOn;
+    private LocalDateTime updatedOn;
 }

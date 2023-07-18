@@ -14,7 +14,7 @@ public class ChatMessage {
     private Long id;
 
     @ManyToOne
-    private AppUser appUser;
+    private User user;
 
     private String content;
 

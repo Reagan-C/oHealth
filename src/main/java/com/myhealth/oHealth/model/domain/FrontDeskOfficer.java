@@ -21,7 +21,7 @@ public class FrontDeskOfficer {
 
         @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
         @JoinColumn(name = "user_id")
-        private AppUser user;
+        private User user;
 
         @ManyToMany(fetch = FetchType.EAGER)
         @JoinTable(name = "manager_roles",

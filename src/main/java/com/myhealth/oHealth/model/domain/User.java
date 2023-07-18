@@ -20,8 +20,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "app_user")
-public class AppUser {
+@Table(name = "user")
+public class User {
 
 
     @Id
@@ -46,11 +46,11 @@ public class AppUser {
     @Column(name = "address", nullable = false)
     private String address;
 
-    @OneToMany(mappedBy = "appUser", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<ChatMessage> chatMessages;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "app_user_id")
+    @JoinColumn(name = "user_id")
     private List<Qualification> qualifications = new ArrayList<>();
 
     @Temporal(TemporalType.DATE)

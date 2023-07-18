@@ -2,7 +2,7 @@ package com.myhealth.oHealth.model.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Getter
@@ -18,7 +18,7 @@ public class Doctor {
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private AppUser user;
+    private User user;
 
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private List<Appointment> appointments;

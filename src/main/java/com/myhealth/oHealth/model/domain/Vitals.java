@@ -23,7 +23,7 @@ public class Vitals {
     private Patient patient;
 
     @Column(name = "temperature", nullable = false)
-    private double temperature;
+    private String temperature;
 
     @Column(name = "blood_pressure", nullable = false)
     private String bloodPressure;

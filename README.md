@@ -5,15 +5,19 @@
 A health management system app where the user can book for appointments, get email notifications on test results,
 etc. This will be updated...
 
-[//]: # ()
+
 [//]: # (An API documentation with a link to POSTMAN is embedded below;)
 
-[//]: # ()
-[//]: # ()
-[//]: # ()
+
 [//]: # (**API Documentation**)
 
+[//]: # ()
 [//]: # (-  [Rest APIs]&#40;https://www.postman.com/shopit121/workspace/shopit/collection/24452852-1b980d67-3e39-4d33-9c14-79a148357c79&#41;)
+
+[//]: # ()
+[//]: # (**DB Documentation**)
+
+- [DB  diagram Documentation](https://dbdocs.io/onwuegbureagan/OHealth)
 
 [//]: # ()
 [//]: # ()
