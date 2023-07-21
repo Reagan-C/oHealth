@@ -46,6 +46,9 @@ public class User {
     @Column(name = "address", nullable = false)
     private String address;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<ChatMessage> chatMessages;
 
@@ -58,6 +61,12 @@ public class User {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles = new ArrayList<>();
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)

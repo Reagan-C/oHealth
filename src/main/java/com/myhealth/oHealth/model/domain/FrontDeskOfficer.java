@@ -23,11 +23,4 @@ public class FrontDeskOfficer {
         @JoinColumn(name = "user_id")
         private User user;
 
-        @ManyToMany(fetch = FetchType.EAGER)
-        @JoinTable(name = "manager_roles",
-                joinColumns = @JoinColumn(name = "manager_id"),
-                inverseJoinColumns = @JoinColumn(name = "role_id"))
-        private List<Role> roles = new ArrayList<>();
-
-
 }
