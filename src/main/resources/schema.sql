@@ -7,6 +7,7 @@
         `phone_number` VARCHAR(255) NOT NULL,
         `gender` VARCHAR(255) NOT NULL,
         `address` VARCHAR(255) NOT NULL,
+        `password` VARCHAR(255) NOT NULL,
         `date_of_birth` DATE NOT NULL,
         `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
         `updated_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -35,7 +36,6 @@ CREATE TABLE IF NOT EXISTS `chat_message` (
 CREATE TABLE IF NOT EXISTS `doctor` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
     `user_id` BIGINT,
-    `role_id` BIGINT,
 
     PRIMARY KEY (`id`)
 );
@@ -47,8 +47,8 @@ CREATE TABLE IF NOT EXISTS `manager` (
     PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `manager_roles` (
-   `manager_id` BIGINT NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_roles` (
+   `user_id` BIGINT NOT NULL,
    `role_id` BIGINT NOT NULL
 );
 
@@ -65,7 +65,6 @@ CREATE TABLE IF NOT EXISTS `medical_record` (
 CREATE TABLE IF NOT EXISTS `patient` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
     `user_id` BIGINT,
-    `role_id` BIGINT,
 
     PRIMARY KEY (`id`)
 );
