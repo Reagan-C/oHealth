@@ -26,7 +26,7 @@ public class ChatMessage {
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "sent_on", nullable = false)
-    private LocalDateTime sentOn;
+    @Column(name = "sent_at", nullable = false)
+    private LocalDateTime sentat;
 }
 

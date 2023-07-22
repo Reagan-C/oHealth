@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `chat_message` (
     `chat_room_id` BIGINT,
     `user_id` BIGINT,
     `content` VARCHAR(255),
-    `sent_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `sent_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     PRIMARY KEY (`id`)
 );
