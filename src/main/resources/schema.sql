@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `appointment` (
 
 CREATE TABLE IF NOT EXISTS `chat_message` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `chat_room_id` BIGINT,
     `user_id` BIGINT,
     `content` VARCHAR(255),
     `sent_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -45,11 +46,6 @@ CREATE TABLE IF NOT EXISTS `manager` (
     `user_id` BIGINT,
 
     PRIMARY KEY (`id`)
-);
-
-CREATE TABLE IF NOT EXISTS `user_roles` (
-   `user_id` BIGINT NOT NULL,
-   `role_id` BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `medical_record` (
@@ -100,5 +96,14 @@ CREATE TABLE IF NOT EXISTS `vitals` (
 
      PRIMARY KEY (`id`)
  );
+
+ CREATE TABLE IF NOT EXISTS `chat_rooms` (
+         `id` BIGINT NOT NULL AUTO_INCREMENT,
+         `doctor_id` BIGINT,
+         `patient_id` BIGINT,
+         `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+          primary key (`id`)
+ ) ;
 
 

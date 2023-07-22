@@ -49,8 +49,11 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<ChatMessage> chatMessages;
+    @OneToMany(mappedBy = "patient")
+    private List<ChatRoom> patientChatRooms;
+
+    @OneToMany(mappedBy = "doctor")
+    private List<ChatRoom> doctorChatRooms;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
