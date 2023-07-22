@@ -60,7 +60,7 @@ public class JwtUtil implements Serializable {
         return claims.getExpiration().before(new Date());
     }
 
-    private String getUsernameFromToken(String token) {
+    public String getUsernameFromToken(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(secretKey())
                 .build()
