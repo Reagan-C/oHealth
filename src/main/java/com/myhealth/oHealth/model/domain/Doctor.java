@@ -20,6 +20,8 @@ public class Doctor {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @Column(name = "availability")
+    private boolean available;
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private List<Appointment> appointments;
 

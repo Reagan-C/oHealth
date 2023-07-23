@@ -29,9 +29,9 @@ public class ChatController {
 
     @MessageMapping("/chat/{roomId}/send")
     @SendTo("/topic/chat/{roomId}")
-    public ChatMessage handleChatMessage(@DestinationVariable Long roomId,
+    public ChatMessage handleChatMessage(@DestinationVariable String roomId,
                                          ChatMessage message) {
-        message.setChatRoom((ChatRoom) chatRoomRepository.findById(roomId).orElseThrow(
+        message.setChatRoom((ChatRoom) chatRoomRepository.findById(Long.parseLong(roomId)).orElseThrow(
                 () -> new IllegalArgumentException("")
         ));
         message.setSentat(LocalDateTime.now());

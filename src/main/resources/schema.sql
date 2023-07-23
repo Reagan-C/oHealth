@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS `chat_message` (
 CREATE TABLE IF NOT EXISTS `doctor` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
     `user_id` BIGINT,
+    `availability` BOOLEAN DEFAULT TRUE,
 
     PRIMARY KEY (`id`)
 );
