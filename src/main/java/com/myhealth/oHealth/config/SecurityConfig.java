@@ -1,8 +1,8 @@
 package com.myhealth.oHealth.config;
 
 import com.myhealth.oHealth.config.filter.JwtAuthenticationFilter;
-import com.myhealth.oHealth.config.security.JwtAuthenticationEntryPoint;
-import com.myhealth.oHealth.config.security.JwtAuthenticationProvider;
+import com.myhealth.oHealth.config.jwt.JwtAuthenticationEntryPoint;
+import com.myhealth.oHealth.config.jwt.JwtAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

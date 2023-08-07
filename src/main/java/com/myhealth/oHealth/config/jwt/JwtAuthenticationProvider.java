@@ -1,4 +1,4 @@
-package com.myhealth.oHealth.config.security;
+package com.myhealth.oHealth.config.jwt;
 
 import com.myhealth.oHealth.model.domain.Role;
 import com.myhealth.oHealth.model.domain.User;

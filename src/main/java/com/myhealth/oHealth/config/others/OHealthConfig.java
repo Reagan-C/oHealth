@@ -1,4 +1,4 @@
-package com.myhealth.oHealth.config;
+package com.myhealth.oHealth.config.others;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.MessageSource;
