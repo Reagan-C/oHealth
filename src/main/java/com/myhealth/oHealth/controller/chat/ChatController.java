@@ -1,4 +1,4 @@
-package com.myhealth.oHealth.controller;
+package com.myhealth.oHealth.controller.chat;
 
 import com.myhealth.oHealth.model.domain.ChatMessage;
 import com.myhealth.oHealth.model.domain.ChatRoom;
